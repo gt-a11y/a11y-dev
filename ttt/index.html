@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Viga&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="game.js" defer></script>
+    <title>Tic Tac Toe Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cvi-one">&nbsp</div>
+      <div class="cvi-two">&nbsp</div>
+      <div class="cvi-three">&nbsp</div>
+      <div class="cvi-four">&nbsp</div>
+    </div>
+
+    <div class="container">
+      <div class="grid-container2">
+        <button
+          class="board-status-btn"
+          id="announcer-button"
+          onclick="readBoardStatus()"
+        >
+          Check Board Status
+        </button>
+      </div>
+      <div class="grid-container1" id="playerTurn" aria-live="assertive"></div>
+
+      <div class="grid-container3">
+        <img class="float-right" src="images/logo3.png" alt="" />
+      </div>
+    </div>
+
+    <div class="container-column">
+      <div class="grid-container7"></div>
+      <div class="grid-container8">
+        <div class="win-msg2" id="winMsg2">
+          <div data-win-msg-text></div>
+          <div class="restart"><button id="restartButton">Restart</button></div>
+        </div>
+      </div>
+      <div class="grid-container9"></div>
+    </div>
+
+    <div
+      id="boardAnnouncer"
+      class="visually-hidden"
+      aria-live="assertive"
+    ></div>
+
+    <div class="board" id="board">
+      <div class="cell" vertical="top" horizontal="left" data-cell></div>
+      <div class="cell" vertical="top" horizontal="center" data-cell></div>
+      <div class="cell" vertical="top" horizontal="right" data-cell></div>
+      <div class="cell" vertical="center" horizontal="left" data-cell></div>
+      <div class="cell" vertical="center" horizontal="center" data-cell></div>
+      <div class="cell" vertical="center" horizontal="right" data-cell></div>
+      <div class="cell" vertical="bottom" horizontal="left" data-cell></div>
+      <div class="cell" vertical="bottom" horizontal="center" data-cell></div>
+      <div class="cell" vertical="bottom" horizontal="right" data-cell></div>
+    </div>
+
+    <div class="mobile-only" id="">
+      <div>This website is best viewed on desktop.</div>
+    </div>
+  </body>
+</html>
